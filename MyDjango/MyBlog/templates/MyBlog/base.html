@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>XiaoLan's Blog</title>
+</head>
+
+<!-- 这是一行html注释 -->
+<!--
+style中：
+corlor:      字段颜色
+background:  背景颜色
+padding:     盒子内页边距
+  px:        根据参数个数不同，上右下左
+  em:        相对比例
+margin:      盒子外页边距
+-->
+
+<style type="text/css">
+    body{
+        color: #000;
+        background: #F9F9F9;
+        padding: 12px 5em;
+        margin:7px;
+    }
+    h1{
+        color: #ffffff;
+        padding: 2em;
+        background: #1D8BC1;
+    }
+    h2{
+        color: #FF5D49;
+        border-top: 2px dotted #000000;
+        margin-top:2em;
+    }
+    h3{
+        color: #FFD700;
+        margin-top:2em;
+    }
+    h4{
+        color: #FF00FF;
+        margin-top:2em;
+    }
+    p{
+        margin:1em 0;
+    }
+</style>
+<body>
+<h1>小蓝的博客</h1>
+<h2>level -> h2</h2>
+<h3>level -> h3 简单，纯粹！</h3>
+<h4>level -> h4</h4>
+{% block content %}
+{% endblock %}
+</body>
+</html>
