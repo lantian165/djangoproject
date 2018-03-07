@@ -16,6 +16,22 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+# add by yichen
+from django.conf.urls import include
+from DjangoUeditor import urls as djud_urls
+from django.conf import settings
+
+import blog.urls as blog_url
+from blog.views import home
+
 urlpatterns = [
+    url(r'^$',home,name="index"),
+    url(r'^blog/',include(blog_url)),
     url(r'^admin/', admin.site.urls),
+#    url(r'^ueditor/', include(djud_urls)),
+    url(r'^ueditor/', include('DjangoUeditor.urls')),
 ]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
